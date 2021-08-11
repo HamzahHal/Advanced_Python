@@ -1,5 +1,4 @@
+
 name = input("what is your name : ")
 
-print(name, "hellow")
-
-print('trett')
+print("Hey", name, "how are you")
