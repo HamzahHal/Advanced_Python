@@ -25,6 +25,7 @@ print(type(0.5343))
 
 print(2 ** 3)
 print(float(2 // 4))
+# Return remainder of  the divided value
 print(9 % 5)
 
 
