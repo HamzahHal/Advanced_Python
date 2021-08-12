@@ -31,5 +31,7 @@ if test < 0:
 else:
     print('Found it myguy')
 
-print(quote)
-print(test)
+new_text = quote.replace('be', 'BOB')
+
+print(new_text)
+
