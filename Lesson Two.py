@@ -34,8 +34,18 @@ print(round(7.6))
 print(round(3.2))
 print(abs(-342))
 
-
-
+# list - type of array (data type)
+li = [1, 2, 3, 4, 5]
+li2 = ['c', 'v', 'b']
+li3 = [1.5, 3, 4.54, 's', False]
+amazon_cart = ['notepad', 'testcare']
+print(amazon_cart[0])
+new_value = 'test'
+new_value2 = 'fello'
+amazon_cart.insert(1, 'testewr')
+amazon_cart.append(new_value)
+amazon_cart.append([new_value, new_value2])
+print(amazon_cart)
 # Classes -> custom types
 
 # Specialized Data Types
