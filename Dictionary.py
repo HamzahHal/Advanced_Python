@@ -30,5 +30,17 @@ new_list = [
 print(new_list[1])
 print(new_list[1]['f'])
 print(new_list[1]['f'][0])
+
 # Use the get method in order to find values from keys in a dictionary so it doesn't break the rest of the code execution
 print(new_list[0].get('a', 'The value doesnt exist'))
+
+user = {
+    'basket': [1,3,4],
+    'greet': 'jello',
+    'age': 30
+}
+
+print('basket' in user)
+print('size' in user)
+print(user.update({'age': 55}))
+print(user)
