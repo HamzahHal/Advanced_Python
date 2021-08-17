@@ -28,7 +28,6 @@ print(float(2 // 4))
 # Return remainder of  the divided value
 print(9 % 5)
 
-
 # math functions
 print(round(7.6))
 print(round(3.2))
@@ -96,8 +95,6 @@ print(cart.index('x', 0, 3))
 print('l' in cart)
 print('x' in cart)
 
-
-
 # cart.sort()
 new_cart = sorted(cart)
 new_cart.reverse()
@@ -126,7 +123,7 @@ new_sentence = ' '.join(['Hi', 'Name', 'is', 'Hamzah'])
 print(new_sentence)
 
 # List Unpacking
-a,b,c, *other = [1,2,3,4,5,6,7,8,9]
+a, b, c, *other = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(a)
 print(b)
 print(c)
@@ -134,7 +131,7 @@ print(other)
 print(type(other))
 # print(d)
 
-x,y,z = { 'car': 45, 1: 'new', 'carbon': 32}
+x, y, z = {'car': 45, 1: 'new', 'carbon': 32}
 
 # homer = 'never'
 # x = {'never': 'ever'}
@@ -143,7 +140,68 @@ new_type = str(y)
 print(new_type)
 print(type(new_type))
 
+# Dictionary
+dictionary_items = {
+    'a': [1, 5, 6],
+    'b': 2,
+    'c': 3
+}
+print(dictionary_items['a'][1])
 
+new_list = [
+    {
+        'a': [1, 5, 6],
+        'b': 2,
+        'c': 3
+    },
+    {
+        'f': [6, 2, 0],
+        'k': 2,
+        'l': 3
+    }
+]
+print(new_list[1])
+print(new_list[1]['f'])
+print(new_list[1]['f'][0])
+
+# Game data storage using a dictionary inside a list
+Player_Data = [
+    {
+        'Player Name': 'K1LL3R101',
+        'Age': 2500,
+        'Base Health': 100,
+        'Additional Health': 0,
+        'Items Equippable': 5,
+        'Items Equipped': ['Sword', 'Gun', 'Spear']
+    },
+    {
+        'Player Name': 'TaleOfScripting',
+        'Age': 53443,
+        'Base Health': 100,
+        'Additional Health': 433,
+        'Items Equippable': 58,
+        'Items Equipped': 34,
+    }
+]
+
+print(Player_Data[0]['Player Name'])
+
+Player_Data[0]['Player Name'] = 'VetexGames'
+Player_Data[1]['Player Name'] = 'ShadeOfAzure'
+
+
+print(Player_Data[0]['Items Equipped'])
+print(Player_Data[1]['Player Name'])
+print(Player_Data[1]['Age'])
+
+Item_len = len(Player_Data[0]['Items Equipped'])
+print(Item_len)
+
+slots_left = Player_Data[0]['Items Equippable'] - Item_len
+print(slots_left)
+
+if Item_len < Player_Data[0]['Items Equippable']:
+    print(f'You have {slots_left} equip slots left')
 
 # Classes -> custom types
 
