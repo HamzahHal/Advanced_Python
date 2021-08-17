@@ -112,6 +112,39 @@ print(cart)
 #     else:
 #         print('false')
 #         break
+
+
+letters = ['a', 'x', 'v', 's', ' b', ' f']
+
+# Using range to create a list up to the range amount
+number_range = list(range(50))
+
+print(number_range)
+
+new_sentence = ' '.join(['Hi', 'Name', 'is', 'Hamzah'])
+
+print(new_sentence)
+
+# List Unpacking
+a,b,c, *other = [1,2,3,4,5,6,7,8,9]
+print(a)
+print(b)
+print(c)
+print(other)
+print(type(other))
+# print(d)
+
+x,y,z = { 'car': 45, 1: 'new', 'carbon': 32}
+
+# homer = 'never'
+# x = {'never': 'ever'}
+print(type(y))
+new_type = str(y)
+print(new_type)
+print(type(new_type))
+
+
+
 # Classes -> custom types
 
 
