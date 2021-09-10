@@ -35,7 +35,7 @@ print(new_list[1]['f'][0])
 print(new_list[0].get('a', 'The value doesnt exist'))
 
 user = {
-    'basket': [1,3,4],
+    'basket': [1, 3, 4],
     'greet': 'jello',
     'age': 30
 }
