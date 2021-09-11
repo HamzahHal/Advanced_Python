@@ -49,6 +49,10 @@ if is_buddy or is_user:
 
 is_magician = True
 is_expert = False
+# check if magician AND expert: ' you are a master magician.
+# check if magician but not expert: ' at least you're getting there '
+
+# if you're not a magician: "you need magic powers".
 
 if is_magician & is_expert:
     print('You are a master magician')
@@ -57,8 +61,10 @@ elif is_magician and not is_expert:
 elif not is_magician:
     print('You need magic power')
 
-
-# check if magician AND expert: ' you are a master magician.
-# check if magician but not expert: ' at least you're getting there '
-
-# if you're not a magician: "you need magic powers".
+print(True is True)
+print('1' is '1')
+print([] is [])
+print(10 is 10)
+a = [1,2,3]
+b = [1,2,3]
+print(a == b)
