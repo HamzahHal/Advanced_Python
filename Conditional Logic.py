@@ -6,7 +6,7 @@ if is_old & is_license:
 elif is_license:
     print("You have a license but not the age")
 elif is_old:
-    print("You have the age but not the licesnse")
+    print("You have the age but not the license")
 else:
     print("you may not drive yet")
 
