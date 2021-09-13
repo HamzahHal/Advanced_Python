@@ -34,14 +34,18 @@ picture = [
 # Readability
 # Predictability
 # DRY ( Do not  repeat yourself)
-fill = '|'
-empty = ' '
-for row in picture:
-    for pixel in row:
-        if pixel:
-            print(fill, end='')
-        else:
-            print(empty, end='')
-    # Need a new line after every row
-    print('')
+def show_tree():
+    fill = '|'
+    empty = ' '
+    for row in picture:
+        for pixel in row:
+            if pixel:
+                print(fill, end='')
+            else:
+                print(empty, end='')
+        # Need a new line after every row
+        print('')
 
+
+show_tree()
+show_tree()
