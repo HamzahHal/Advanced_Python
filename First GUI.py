@@ -9,18 +9,18 @@ picture = [
     [0, 0, 0, 1, 0, 0, 0]
 ]
 # Attempted Exercise
-i = ' '
-k = '*'
-image = []
-
-for index, integer in enumerate(picture):
-    if integer == 0:
-        space = ' '
-        image[index] += space
-    elif integer == 1:
-        star = '*'
-        image[index] += star
-    print(image)
+# i = ' '
+# k = '*'
+# image = []
+#
+# for index, integer in enumerate(picture):
+#     if integer == 0:
+#         space = ' '
+#         image[index] += space
+#     elif integer == 1:
+#         star = '*'
+#         image[index] += star
+#     print(image)
 
 # for num in picture:
 #     if num == 0:
@@ -28,13 +28,20 @@ for index, integer in enumerate(picture):
 #     elif num == 1:
 #         image.append(k)
 #         continue
-print(image)
 
 # Solution
+# Clean
+# Readability
+# Predictability
+# DRY ( Do not  repeat yourself)
+fill = '|'
+empty = ' '
 for row in picture:
     for pixel in row:
-        if pixel == 1:
-            print('*', end='')
+        if pixel:
+            print(fill, end='')
         else:
-            print(' ', end='')
+            print(empty, end='')
+    # Need a new line after every row
     print('')
+
