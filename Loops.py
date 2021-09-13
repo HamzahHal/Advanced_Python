@@ -40,10 +40,77 @@
 print("hellow world")
 
 # Counter
-my_list = [1,2,3,4,5,6,7,8,9,10]
-counter = 0
+# my_list = [1,2,3,4,5,6,7,8,9,10]
+# counter = 0
+#
+# for items in my_list:
+#     counter += items
+#
+# print(counter)
 
-for items in my_list:
-    counter += items
+# for _ in range(10):
+#     print(_)
+#
+# for _ in range(0, 10, 2):
+#     print(_)
+#
+# for _ in range(10, 0, -1):
+#     print(_)
+#
+# # using iterable to print a range as a list
+# for _ in range(2):
+#     print(list(range(10)))
 
-print(counter)
+# enumerate
+# for i, char in enumerate('Helloooo'):
+#     print(i, char)
+#
+#
+# for i, char in enumerate([1,2,3,4,5]):
+#     print(i, char)
+
+
+# for i, char in enumerate((1,2,3,4,5)):
+#     print(i, char)
+
+# for i, char in enumerate(list(range(100))):
+#     print(i, char)
+#     if char == 50:
+#         print(f'index of 50 is {i}')
+#
+# # While loops
+# i = 0
+# while i < 50:
+#     i += 1
+#     print(i)
+# else:
+#     print('done with all the work')
+#
+# my_list = [1,2,3]
+# for item in my_list:
+#     print(item)
+#
+# i = 0
+# while i < len(my_list):
+#     print(my_list[i])
+#     i += 1
+#
+# while True:
+#     response = input('say something: ')
+#     if response == 'Bye':
+#         break
+tries = 0
+attempts = 3
+username = 'Hamzah'
+password = 'letmein'
+while tries < attempts:
+    response = input('Enter Username: ')
+    response_pass = input('Enter Password: ')
+    if response == username and response_pass == password:
+        print('Sign in Successful')
+        break
+    else:
+        print('Try Again')
+        tries += 1
+        if tries >= attempts:
+            print("You've exceeded your daily attempts, try again next time")
