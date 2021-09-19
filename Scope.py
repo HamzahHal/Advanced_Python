@@ -49,6 +49,7 @@ def outer():
         nonlocal x
         x = "nonlocal".replace
         print('inner: ', x)
+
     inner()
     print('outer: ', x)
 
