@@ -13,11 +13,19 @@ class PlayerCharacter:
     def shout(self):
         print(f'my name is {self.name}')
 
-    def run(self, hello):
-        print(f'name name name {self.name}')
+    def run(self):
+        return self
+
+    @classmethod
+    def adding_things(cls, num1, num2):
+        return cls('Terry', num1 + num2)
+
+    @staticmethod
+    def adding_more_things(num1, num2):
+        return num1 + num2
 
 
-#player1 = PlayerCharacter('collu', 50)
+player1 = PlayerCharacter('collu', 50)
 player2 = PlayerCharacter('Tom', 43)
 player2.attack = 50
 player2.speed = 34
@@ -41,12 +49,12 @@ player2.hit = False
 #     player2.health += (60 / 2)
 #     player2.attack += (100 / 2)
 
-#print(player1.run('hiiiiiiiiiiiiiii'))
+# print(player1.run('hiiiiiiiiiiiiiii'))
 # print(f'attack {player2.attack}')
 # # print(f'speed {player2.speed}')
 # print(f'health {player2.health}')
 # # print(f'power {player2.power}')
-#print(player2.membership)
-#print(player1.shout())
-print(player2.attack)
-print(player2.name)
+# print(player2.membership)
+# print(player1.shout())
+player3 = PlayerCharacter.adding_things(12, 3)
+print(player3.run())
