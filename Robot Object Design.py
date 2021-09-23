@@ -12,9 +12,11 @@ class RobotCharacter:
             self.velocity -= 3
             return self.velocity
 
+    def shout(self):
+        print(f'my name is {self.name} & I am {self.age} years old')
 
 robot1 = RobotCharacter(20, 10, 300)
 
 print(robot1.new_movement())
 print(type(robot1.new_movement()))
-
+player1.speak()

@@ -1,20 +1,19 @@
+# Can we make this private
 # OOP
-
-
 class PlayerCharacter:
     # Class object attribute (static , not dynamic)
     membership = True
 
     def __init__(self, name='Anonymous', age=0):
         if age > 18:
-            self.name = name  # Attributes
-            self.age = age
-
-    def shout(self):
-        print(f'my name is {self.name}')
+            self._name = name  # Attributes
+            self._age = age
 
     def run(self):
         return self
+
+    def speak(self):
+        print(f'my name is {self._name} & I am {self._age} years old')
 
     @classmethod
     def adding_things(cls, num1, num2):
@@ -23,6 +22,10 @@ class PlayerCharacter:
     @staticmethod
     def adding_more_things(num1, num2):
         return num1 + num2
+
+    @property
+    def name(self):
+        return self._name
 
 
 player1 = PlayerCharacter('collu', 50)
@@ -57,4 +60,9 @@ player2.hit = False
 # print(player2.membership)
 # print(player1.shout())
 player3 = PlayerCharacter.adding_things(12, 3)
-print(player3.run())
+# print(player3.run)
+
+# Example of a Dunder Method
+# __doc__
+print(help.__sizeof__())
+print(player1.name)
