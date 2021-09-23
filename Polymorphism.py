@@ -21,6 +21,7 @@ class Wizard(User):
 
     def attack(self):
         # Here is where I'm accessing the main parent classes method
+        # Polymorphism
         User.attack(self)
         print(f'Attacking with {self.element}')
 
@@ -46,11 +47,15 @@ wizard1 = Wizard('Dr. Strange', 'Fire')
 
 archer1 = Archer('Green Arrow', 100)
 
-# def player_attack(char):
-#     char.attack()
 
-# for char in [wizard1, archer1]:
-#     char.attack()
+# Polymorphism
+def player_attack(char):
+    char.attack()
+
+
+# Polymorphism
+for char in [wizard1, archer1]:
+    char.attack()
 print(wizard1.attack())
 # player_attack(wizard1)
 # player_attack(wizard1)
