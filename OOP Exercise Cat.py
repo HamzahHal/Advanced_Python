@@ -24,5 +24,6 @@ def findOldest():
             print(oldest)
     return oldest
 
+
 # 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
 print(f'The oldest cat is the {findOldest()}.')
