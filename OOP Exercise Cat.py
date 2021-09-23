@@ -20,6 +20,8 @@ def findOldest():
     for i in my_list:
         if i > oldest:
             oldest = i
+            # See the process
+            print(oldest)
     return oldest
 
 # 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
