@@ -44,7 +44,6 @@ class Archer(User):
 
 # Instantiated objects
 wizard1 = Wizard('Dr. Strange', 'Fire')
-
 archer1 = Archer('Green Arrow', 100)
 
 
