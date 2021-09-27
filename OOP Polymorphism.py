@@ -1,4 +1,7 @@
 class User:
+    def __init__(self, email):
+        self.email = email
+
     @staticmethod
     def sign_in():
         user = input('Enter Username: ')
@@ -55,7 +58,7 @@ def player_attack(char):
 # Polymorphism
 for char in [wizard1, archer1]:
     char.attack()
-print(wizard1.attack())
+print(wizard1.email)
 # player_attack(wizard1)
 # player_attack(wizard1)
 # player_attack(archer1)

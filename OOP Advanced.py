@@ -1,4 +1,7 @@
 class User:
+    def __init__(self, email):
+        self.email = email
+
     @staticmethod
     def sign_in():
         user = input('Enter Username: ')
@@ -10,7 +13,11 @@ class User:
 
 
 class Wizard(User):
-    def __init__(self, name, element):
+    def __init__(self, name, element, email):
+        # Best method to access the Parent Class's __init__ constructor's attribute(email)
+        super().__init__(email)
+        # Alternative method to access the Parent Class's __init__ constructor's attribute(email)
+        # User.__init__(self, email)
         self.name = name
         self.element = element
 
@@ -35,10 +42,10 @@ class Archer(User):
 
 
 # Instantiated objects
-wizard1 = Wizard('Dr. Strange', 'Fire')
+wizard1 = Wizard('Dr. Strange', 'Fire', 'DrStrange@gmail.com')
 
 archer1 = Archer('Green Arrow', 100)
 
-wizard1.attack()
+print(wizard1.email)
 # archer1.attack()
 print(isinstance(wizard1, object))
