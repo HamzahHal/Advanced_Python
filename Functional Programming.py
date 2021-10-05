@@ -66,11 +66,9 @@ result = list(map(multiply_by2_map, my_list))
 print(result)
 new_map = list(map(divide_map, item_div))
 new_map_str = str(list(map(divide_map, item_div)))
-change_map = float(new_map_str)
 
 print(type(new_map))
 print(type(new_map_str))
-print(type(change_map))
 
 print(new_map)
 # print(multiply_by2(my_list))
