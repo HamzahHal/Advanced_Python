@@ -62,15 +62,27 @@ def divide_map(item):
     return item / 2
 
 
-result = list(map(multiply_by2_map, my_list))
-print(result)
+result_list = list(map(multiply_by2_map, my_list))
+result_tuple = tuple(map(multiply_by2_map, my_list))
+result_set = set(map(multiply_by2_map, my_list))
+# The reason why it shows the memory location for this is because, map iterates over each item in the dataset but converting it to a string would mean that all the items are to
+# become 1 whole string which is the reason why it won't show the result and instead only shows its memory location and that it's type has turned to a string.
+result_string = str(map(multiply_by2_map, my_list))
+print(result_list)
+print(result_tuple)
+print(result_set)
+print(result_string)
+print(type(result_string))
+
+
 new_map = list(map(divide_map, item_div))
 new_map_str = str(list(map(divide_map, item_div)))
 
 print(type(new_map))
 print(type(new_map_str))
-
+print(new_map_str)
 print(new_map)
+
+
 # print(multiply_by2(my_list))
 # print(new_num)
-
