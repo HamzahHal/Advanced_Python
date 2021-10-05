@@ -1,3 +1,6 @@
+from functools import reduce
+
+
 def math_test(li):
     new_item = []
     trash_item = []
@@ -46,8 +49,9 @@ print(multiply_by2([3, 10, 5]))
 
 # Map, filter, zip and reduce
 
-my_list = [1, 25, 3]
-new_num = []
+my_list = [1, 2, 3]
+your_list = {10, 20, 30}
+their_list = [5, 4, 3]
 
 
 def multiply_by2_map(result):
@@ -62,6 +66,18 @@ def divide_map(item):
     return item / 2
 
 
+# Filter
+def only_odd(item):
+    return item % 2 != 0
+
+
+name1 = 'Hamzah', 'Galvin', 'Rav', 'Talha', 'Moh'
+
+
+def user_filter(items):
+    return items != 'Hamzah'
+
+
 result_list = list(map(multiply_by2_map, my_list))
 result_tuple = tuple(map(multiply_by2_map, my_list))
 result_set = set(map(multiply_by2_map, my_list))
@@ -74,7 +90,6 @@ print(result_set)
 print(result_string)
 print(type(result_string))
 
-
 new_map = list(map(divide_map, item_div))
 new_map_str = str(list(map(divide_map, item_div)))
 
@@ -82,7 +97,41 @@ print(type(new_map))
 print(type(new_map_str))
 print(new_map_str)
 print(new_map)
+print(list(filter(only_odd, my_list)))
+print(list(filter(user_filter, name1)))
 
 
+# Zip
+# print(list(zip(my_list, your_list, their_list)))
+# Reduce
+def accumulator(acc, item):
+    print(acc + item)
+    return acc + item
+
+
+print(reduce(accumulator, my_list, 10))
+
+increase = 10, 10, 10
+
+
+def baseExp(base, value):
+    return base + value
+
+
+print(reduce(baseExp, increase, 1))
+current_exp = 0
+for i in range(2):
+    current_exp += reduce(baseExp, increase, 1)
+
+print(current_exp)
+
+characters = 'a', 'b', 'c', 'd'
+
+
+def char_add(first, char):
+    return first + char
+
+
+print(reduce(char_add, characters, 'A'))
 # print(multiply_by2(my_list))
 # print(new_num)
