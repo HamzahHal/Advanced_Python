@@ -15,7 +15,7 @@ simple_dict = {'a': 1,
 my_dict = {key: value ** 2 for key, value in simple_dict.items() if value % 2 == 0}
 new_dict = {key.join('ad'): value for key, value in simple_dict.items()}
 
-other_dict = {num:num*2 for num in [1, 2, 3]}
+other_dict = {num: num * 2 for num in [1, 2, 3]}
 
 print(other_dict)
 
