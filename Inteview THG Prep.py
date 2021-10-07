@@ -44,7 +44,7 @@ def Palindrome(self, head):
         r -= l
     return True
 
-    # Palindrome in O(n) time and O(1) [constant] space
+    # Palindrome in O(n) time and O(1) [constant] space!
     fast = head
     slow = head
     # Find middle (slow)
