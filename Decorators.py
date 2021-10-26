@@ -24,25 +24,23 @@ def tester2():
 
 # Decorator
 def my_decorator(func):
-    def wrap_func():
+    def wrap_func(*args, **kwargs):
         print("******")
-        func()
-        design = input("Enter design sign: ")
-        key = len(design * 4)
-        print(design * key)
+        func(*args, **kwargs)
+        print("******")
 
     return wrap_func
 
 
 @my_decorator
-def hey():
-    print("Hey")
+def hey(greetings, emoji=":)"):
+    print(greetings, emoji)
 
 
-@my_decorator
-def bye():
-    print("Bye")
+# @my_decorator
+# def bye():
+#     print("Bye")
 
 
-hey()
-bye()
+hey("hi bitches")
+# bye()
