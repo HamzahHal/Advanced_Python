@@ -1,29 +1,102 @@
-from tkinter import *
-
-# Root Frame
-root = Tk()
-root.title("Test Interface")
-UserLabel = Label(root, text="Username")
-UserLabel.grid(row=0,column=2,)
-
-# Entry Box
-eUser = Entry(root, width=100, borderwidth=5)
-eUser.grid(row=1, column=1, columnspan=3, padx=10, pady=10)
-
-
-# Button Function
-def DbInput():
+# from tkinter import *
+#
+#
+# def LoginPage():
+#     # Root Frame
+#     root.title("Test Interface")
+#     canvas = root()
+#     UserLabel = Label(root, text="Username")
+#     UserLabel.grid(row=0, column=2)
+#     # Username Entry Box
+#     eUser = Entry(root, width=100, borderwidth=5)
+#     eUser.grid(row=1, column=1, columnspan=3, padx=10, pady=10)
+#     # Username Entry Box
+#     ePass = Entry(root, width=100, borderwidth=5)
+#     ePass.grid(row=1, column=1, columnspan=3, padx=10, pady=10)
+#     # Button Initiation
+#     EnterButton = Button(root, text="Login", padx=40, pady=20, command=AuthUser)
+#
+# def DevPage():
+#     # Root Frame
+#     root.title("Test Interface")
+#     UserLabel = Label(root, text="Username")
+#     UserLabel.grid(row=0, column=2)
+#     # Username Entry Box
+#     eUser = Entry(root, width=100, borderwidth=5)
+#     eUser.grid(row=1, column=1, columnspan=3, padx=10, pady=10)
+#     # Username Entry Box
+#     ePass = Entry(root, width=100, borderwidth=5)
+#     ePass.grid(row=1, column=1, columnspan=3, padx=10, pady=10)
+#     # Button Initiation
+#     EnterButton = Button(root, text="Login", padx=40, pady=20, command=AuthUser)
+#
+#
+# # Button Function
+def AuthUser():
     pass
+#
+#
+# def changepage():
+#     global pagenum, root
+#     for widget in root.winfo_children():
+#         widget.destroy()
+#     if pagenum == 1:
+#         DevPage(root)
+#         pagenum = 2
+#     else:
+#         LoginPage()
+#         pagenum = 1
+#
+#
+# pagenum = 1
+# # Root Frame
+# root = Tk()
+# LoginPage()
+#
+# root.mainloop()
 
 
-# Button Initiation
-EnterButton = Button(root, text="1", padx=40, pady=20, command=DbInput)
+import tkinter as tk
 
 
-def myClick():
-    pass
+def page1(root):
+    # Username Label
+    UserLabel = tk.Label(root, text="Username")
+    UserLabel.grid(row=0, column=3)
+    # Username Entry Box
+    eUser = tk.Entry(root, width=100, borderwidth=5)
+    eUser.grid(row=1, column=2, columnspan=3, padx=10, pady=10)
+    # Password Label
+    PassLabel = tk.Label(root, text="Password")
+    PassLabel.grid(row=2, column=3)
+    # Password Entry Box
+    ePass = tk.Entry(root, width=100, borderwidth=5)
+    ePass.grid(row=3, column=2, columnspan=3, padx=10, pady=10)
+    # Button Initiation
+    EnterButton = tk.Button(root, text="Login", padx=40, pady=20, command=AuthUser)
 
 
-myButton = Button(root, text="Enter User", command=myClick)
+def page2(root):
+    page = tk.Frame(root)
+    page.grid()
+    tk.Label(page, text='This is page 2').grid(row=0)
+    tk.Button(page, text='To page 1', command=changepage).grid(row=1)
 
+
+def changepage():
+    global pagenum, root
+    for widget in root.winfo_children():
+        widget.destroy()
+    if pagenum == 1:
+        page2(root)
+        pagenum = 2
+    else:
+        page1(root)
+        pagenum = 1
+
+
+pagenum = 1
+root = tk.Tk()
+root.geometry("700x300")
+page1(root)
 root.mainloop()
