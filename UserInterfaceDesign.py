@@ -33,7 +33,11 @@
 #
 # # Button Function
 def AuthUser():
-    pass
+    Label1 = tk.Label(root, text="Login Accepted")
+    Label2 = tk.Label(root, text="Login Denied")
+    Label1.grid(row=7,column=3)
+    Label2.grid(row=8,column=3)
+
 #
 #
 # def changepage():
@@ -59,7 +63,7 @@ def AuthUser():
 import tkinter as tk
 
 
-def page1(root):
+def LoginPage(root):
     # Username Label
     UserLabel = tk.Label(root, text="Username")
     UserLabel.grid(row=0, column=3)
@@ -74,6 +78,8 @@ def page1(root):
     ePass.grid(row=3, column=2, columnspan=3, padx=10, pady=10)
     # Button Initiation
     EnterButton = tk.Button(root, text="Login", padx=40, pady=20, command=AuthUser)
+    EnterButton.grid(row=4, column=3)
+
 
 
 def page2(root):
@@ -84,19 +90,19 @@ def page2(root):
 
 
 def changepage():
-    global pagenum, root
+    global PageNum, root
     for widget in root.winfo_children():
         widget.destroy()
-    if pagenum == 1:
+    if PageNum == 1:
         page2(root)
-        pagenum = 2
+        PageNum = 2
     else:
-        page1(root)
-        pagenum = 1
+        LoginPage(root)
+        PageNum = 1
 
 
-pagenum = 1
+PageNum = 1
 root = tk.Tk()
 root.geometry("700x300")
-page1(root)
+LoginPage(root)
 root.mainloop()
